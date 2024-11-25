@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bleach - Anime</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bleach</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#characters">Personagens</a></li>
+                <li><a href="#episodes">Episódios</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <img src="bleach.jpg" alt="Banner Bleach">
+        <div>
+            <h2>Bem-vindo ao Mundo de Bleach</h2>
+            <p>Bleach é um anime de ação e aventura que segue a jornada de Ichigo Kurosaki, um jovem que se torna um Shinigami e luta para proteger o mundo dos espíritos malignos.</p>
+        </div>
+    </section>
+
+    <section id="characters">
+        <h2>Galeria de Personagens</h2>
+        <div class="character-list">
+            <div class="character-card" onclick="showCharacterDetails('Ichigo Kurosaki é um personagem complexo, com uma forte vontade de proteger seus amigos e entes queridos. Embora tenha uma atitude impulsiva e um tanto rebelde, ele é muito leal e está disposto a fazer sacrifícios em nome do bem-estar dos outros. Sua jornada envolve não apenas o crescimento em suas habilidades de combate, mas também o entendimento de sua própria identidade e o conflito entre os diferentes poderes que ele possui.')">
+                <img src="ichigo.jpg" alt="Ichigo Kurosaki">
+                <h3>Ichigo Kurosaki</h3>
+                <p>O protagonista da série, um adolescente com habilidades de Shinigami.</p>
+            </div>
+            <div class="character-card" onclick="showCharacterDetails('Kuchiki Rukia tem uma personalidade forte, mas também é marcada por uma grande compaixão e lealdade para com seus amigos e deveres. Ela é, ao mesmo tempo, séria e prática, mas também demonstra um lado mais sensível, especialmente quando se trata de proteger os outros.')">
+                <img src="rukia.jpg" alt="Rukia Kuchiki">
+                <h3>Rukia Kuchiki</h3>
+                <p>Uma Shinigami que dá seus poderes a Ichigo, e uma boa amiga.</p>
+            </div>
+            <div class="character-card" onclick="showCharacterDetails('Renji Abarai é um personagem com uma personalidade vibrante e muitas vezes impulsiva. Ele é leal, corajoso e um pouco temperamental, especialmente quando se trata de defender seus amigos e suas crenças. Sua história é marcada por sua relação complicada com Byakuya, seu antigo amigo de infância, e a difícil trajetória de superação de suas origens humildes.')">
+                <img src="renji.jpg" alt="Renji Abarai">
+                <h3>Renji Abarai</h3>
+                <p>Um amigo de Ichigo e membro da Gotei 13.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="episodes">
+        <h2>Episódios Favoritos</h2>
+        <div class="episode-list">
+            <div class="episode">
+                <h3>Episódio 1: "Pilot"</h3>
+                <img src="ep 1.jpg" alt="Episódio 1">
+                <p>O começo da jornada de Ichigo Kurosaki como Shinigami.</p>
+                <button onclick="showTrailer('https://www.youtube.com/embed/mnFXQUq-7ks?si=MPjUqeU_ZLUcBSaC')">Assistir Trailer</button>
+            </div>
+            <div class="episode">
+                <h3>Episódio 10: "Fighting the Enemy"</h3>
+                <img src="ep10.jpg" alt="Episódio 10">
+                <p>Ichigo enfrenta poderosos inimigos em uma batalha intensa.</p>
+                <button onclick="showTrailer('https://www.youtube.com/embed/CrmGDzDzZEw?si=JSEN5CglgwtW0xIw')">Assistir Trailer</button>
+            </div>
+            <div class="episode">
+                <h3>Episódio 20: "The Final Stand"</h3>
+                <img src="ep20.jpg" alt="Episódio 20">
+                <p>A batalha final contra um dos vilões mais poderosos.</p>
+                <button onclick="showTrailer('https://www.youtube.com/embed/NwVHHhtmShk?si=rwPrzobkj2ScjL7W')">Assistir Trailer</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contato</h2>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Seu nome" required>
+            <input type="email" id="email" placeholder="Seu e-mail" required>
+            <textarea id="message" placeholder="Sua mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        <p id="form-message"></p>
+    </section>
+
+    <div id="trailer-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <iframe id="trailer-frame" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
